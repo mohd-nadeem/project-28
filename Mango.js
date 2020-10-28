@@ -8,7 +8,8 @@ class Mango {
         }
 
         this.image = loadImage("Plucking mangoes/mango.png");
-        this.body = Bodies.circle(x, y, 40, options);
+        this.body = Bodies.circle(x, y, 30, options);
+        this.r = 30
         World.add(world, this.body);
 
     }
@@ -16,7 +17,7 @@ class Mango {
     display() {
         var pos = this.body.position;
         imageMode(CENTER);
-        image(this.image, pos.x, pos.y, 40, 40);
+        image(this.image, pos.x, pos.y, this.r*2, this.r*2);
     }
 
 }
